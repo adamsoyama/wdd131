@@ -1,0 +1,78 @@
+/* styles.css */
+
+/* Define your color palette */
+:root {
+    --primary-green: #254331; /* Fine shade of green */
+    --secondary-green: #2b4536; /* Slightly darker shade of green */
+    --light-green: #a2d5c6; /* Lighter shade of green */
+    --almost-white: #a49292; /* Slightly darker than white */
+    --off-white: #b3b7ba; /* Light shade of white */
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--off-white); /* Light background */
+}
+
+/* Header Styling */
+header {
+    grid-area: header;
+    background-color: var(--primary-green); /* Primary green background */
+    color: var(--almost-white); /* Slightly darker than white text */
+    padding: 1em;
+    text-align: center;
+}
+
+/* Navigation Styling using Flexbox */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: var(--almost-white); /* Slightly darker than white text */
+    text-decoration: none;
+}
+
+/* Main Content Styling */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+section {
+    grid-column: 1 / 2;
+}
+
+aside {
+    grid-column: 2 / 3;
+    background-color: var(--light-green); /* Light green background */
+    padding: 1em;
+}
+
+/* Footer Styling */
+footer {
+    grid-area: footer;
+    background-color: var(--secondary-green); /* Secondary green background */
+    color: var(--almost-white); /* Slightly darker than white text */
+    text-align: center;
+    padding: 1em;
+}
