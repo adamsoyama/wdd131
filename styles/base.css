@@ -1,0 +1,142 @@
+body {
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #20568d;
+    border-radius: 5px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    /* Reduced bottom padding */
+}
+
+section.card {
+    background-color: #e4e1e1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+section.card div.content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+section.card div.content img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+section.card div.content:nth-child(odd) {
+    flex-direction: row;
+}
+
+section.card div.content:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+ul.centered-list {
+    list-style-type: disc;
+    /* Add bullets to the list */
+    padding-left: 20px;
+    /* Add padding to align bullets */
+    margin: 0 auto;
+    /* Center horizontally */
+    text-align: left;
+    /* Align text to the left */
+    width: 100%;
+    /* Ensure it takes the full width */
+    max-width: 400px;
+    /* Optional: limit the maximum width */
+}
+
+ul.centered-list li a {
+    color: #003366;
+    /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+ul.centered-list li a:hover {
+    background-color: aqua;
+    color: #20568d;
+    /* Link color on hover */
+    text-decoration: underline;
+    /* Optional: underline on hover */
+}
+
+/* Center all heading elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+header.dark {
+    background-color: #000000;
+}
+
+footer.dark {
+    background-color: #000000;
+}

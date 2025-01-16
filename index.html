@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Adams Oyama</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <meta name="description" content="">
+    <meta name="author" content="Adams Oyama">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-    <h1>WDD 131 - Adams Oyama</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Adams Oyama</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/adams-oyama/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p38-p48#title_number1">Scripture</a>
+                </li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card about-me">
+            <h2>About Me</h2>
+            <div class="content">
+                <img src="images/profile.jpg" alt="Adams Oyama">
+                <p>My name is Adams Oyama. I am currently studying WDD 131: Dynamic Web Fundamentals. I live in Calabar,
+                    Cross River State, Nigeria. I have a passion for web development and enjoy creating interactive and
+                    visually appealing websites. I believe in continuous learning and love exploring new technologies
+                    and techniques in web design.
+                    In my free time, I enjoy exploring the cultural heritage and natural beauty of Calabar, immersing
+                    myself in the rich traditions and modern developments of Nigeria. I also stay active in various tech
+                    communities, continuously enhancing my skills and collaborating with like-minded individuals.</p>
+            </div>
+            <hr>
+            <h3>Calabar, Nigeria</h3>
+            <div class="content">
+                <img src="images/calabar.jpg" alt="Nigeria Picture">
+                <p>Nigeria, known as the "Giant of Africa," is the most populous country on the continent, with over 200
+                    million people. It is a diverse nation with more than 250 ethnic groups and a rich cultural
+                    heritage.
+                    From the bustling city of Lagos to the serene landscapes of the Niger Delta, Nigeria is a land of
+                    contrasts and opportunities.</p>
+            </div>
+            <p>Nigerians are known for their resilience, creativity, and vibrant spirit. The country has a thriving arts
+                scene, with Nollywood being one of the largest film industries in the world. Nigerian music,
+                particularly Afrobeat, has gained international acclaim. The people are also passionate about sports,
+                especially football (soccer), and the national team, the Super Eagles, has a large following.</p>
+            <p>Nigeria's economy is one of the largest in Africa, driven by oil and gas production, agriculture, and a
+                growing tech industry. The country is home to many startups and innovation hubs, making it a hotspot for
+                tech enthusiasts and entrepreneurs.</p>
+        </section>
+        <section class="card resources">
+            <h2>Web Dev Resources</h2>
+            <div class="content">
+                <ul class="centered-list">
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                    <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+                    <li><a href="https://www.codecademy.com/">Codecademy</a></li>
+                    <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                    <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+                    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                    <li><a href="https://www.frontendmentor.io/">Frontend Mentor</a></li>
+                    <li><a href="https://www.awwwards.com/">Awwwards</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &bull; Adams Oyama &bull; Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
