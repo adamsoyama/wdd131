@@ -127,3 +127,11 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+@media (min-width: 325px) {
+    header,
+    main,
+    footer {
+        width: 100%;
+        max-width: 512px
+    }
+}
