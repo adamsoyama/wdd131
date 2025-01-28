@@ -3,7 +3,7 @@
     --primary-color: rgb(15, 83, 15);
     --secondary-color: whitesmoke;
     --advent-color: rgba(245, 245, 245, 0.8);
-    --font-family: Arial, sans-serif;
+    --font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -71,6 +71,11 @@ section {
     text-align: center;
 }
 
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
 #data {
     grid-area: data;
 }
@@ -79,17 +84,28 @@ section {
     grid-area: weather;
 }
 
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 40px;
+}
+
 h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     padding: 20px;
 }
 
-#data p, #weather p {
+#data p,
+#weather p {
     margin: 10px 0;
 }
 
-#data p span, #weather p span {
+#data p span,
+#weather p span {
     font-weight: bold;
 }
 
@@ -120,28 +136,34 @@ footer {
         grid-template-rows: auto auto;
         gap: 20px;
         position: absolute;
-     /* Adjust top margin to prevent overlap with header */
-     /* Adjust bottom margin to prevent overlap with footer */
+        top: 80px;
         left: 20px;
         right: 20px;
     }
 
     #data {
         align-self: start;
-        margin-left: 30px;    /* Reduce width on larger screens */
+        width: 80%;
+        /* Reduce width on larger screens */
+        margin-left: 30px;
     }
 
     #weather {
         align-self: end;
-        padding: 10px; /* Reduce width on larger screens */
+        width: 60%;
+        /* Reduce width on larger screens */
+        padding: 10px;
+        margin-left: 10rem;
     }
+
     h2 {
         padding: 0;
-        font-size: 40px;
+        font-size: 24px;
     }
 }
+
 @media (min-width: 1024px) {
     h2 {
-        font-size: 40px;
+        font-size: 24px;
     }
 }
