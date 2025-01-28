@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Weather Page</title>
+    <meta name="description" content="WDD 131 Places, Country and Responsive Webpages">
+    <meta name="author" content="Adams Oyama">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="title">
+            <h1>Nigeria</h1>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/calabar-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/calabar-medium.webp" media="(min-width: 500px)">
+                <img src="images/calabar-medium.webp" alt="Nigeria Photo">
+            </picture>
+        </div>
+        <div class="content-grid">
+            <section id="data">
+                <h2>Data</h2>
+                <p><span>Area:</span> 923,768 sq km</p>
+                <p><span>Population:</span> 206,139,589</p>
+                <p><span>Capital:</span> Abuja</p>
+                <p><span>Languages:</span> English (official), Hausa, Yoruba, Igbo</p>
+                <p><span>Currency:</span> Nigerian Naira</p>
+                <p><span>Time Zone:</span> WAT (UTC+1)</p>
+                <p><span>Calling Code:</span> +234</p>
+                <p><span>Internet TLD:</span> .ng</p>
+            </section>
+            <section id="weather">
+                <h2>Weather ⛅</h2>
+                <p>Temperature: <span id="temperature">28°C</span></p>
+                <p>Wind Speed: <span id="wind-speed">15 km/h</span></p>
+                <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &bull; Adams Oyama &bull; Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

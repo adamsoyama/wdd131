@@ -1,0 +1,147 @@
+/* CSS Variables */
+:root {
+    --primary-color: rgb(15, 83, 15);
+    --secondary-color: whitesmoke;
+    --advent-color: rgba(245, 245, 245, 0.8);
+    --font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Section Styling */
+.content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px 0;
+}
+
+section {
+    background-color: rgba(245, 245, 245, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #1a7288;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#data {
+    grid-area: data;
+}
+
+#weather {
+    grid-area: weather;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#data p, #weather p {
+    margin: 10px 0;
+}
+
+#data p span, #weather p span {
+    font-weight: bold;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgb(15, 83, 15);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+/* Media Queries for Larger Screens (Tablets, Desktops) */
+@media (min-width: 768px) {
+    .hero img {
+        padding-top: 10px;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-areas:
+            "data ."
+            ". weather";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        position: absolute;
+     /* Adjust top margin to prevent overlap with header */
+     /* Adjust bottom margin to prevent overlap with footer */
+        left: 20px;
+        right: 20px;
+    }
+
+    #data {
+        align-self: start;
+        margin-left: 30px;    /* Reduce width on larger screens */
+    }
+
+    #weather {
+        align-self: end;
+        padding: 10px; /* Reduce width on larger screens */
+    }
+    h2 {
+        padding: 0;
+        font-size: 40px;
+    }
+}
+@media (min-width: 1024px) {
+    h2 {
+        font-size: 40px;
+    }
+}
