@@ -1,0 +1,125 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styling */
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #20568d;
+    border-radius: 5px;
+}
+
+/* Main Section Styling */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Image Styling */
+img {
+    display: block;
+    margin: 20px auto;
+    width: 400px;
+    height: auto;
+    background: black;
+    opacity: 0;
+    /* Start with images hidden */
+    animation: fadeIn 1s forwards;
+    /* Fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p#lastModified {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Current year styling */
+footer p#currentyear {
+    font-size: 1.1rem;
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}

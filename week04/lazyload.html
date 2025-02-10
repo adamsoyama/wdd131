@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading</title>
+    <meta name="description" content="WDD 131 - Lazy Loading, Images and Search Engine Optimization">
+    <meta name="author" content="Adams Oyama">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Adams Oyama</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/adams-oyama/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p38-p48#title_number1">Scripture</a>
+                </li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>
+            Lazy Load Images Examples
+        </h1>
+        <img src="../images/profile.jpg" alt="Adams Oyama" width="400" height="600" class="lazyload" loading="lazy">
+        <img src="../images/profile.jpg" alt="Adams Oyama" width="400" height="600" class="lazyload" loading="lazy">
+        <img src="../images/profile.jpg" alt="Adams Oyama" width="400" height="600" class="lazyload" loading="lazy">
+        <img src="../images/profile.jpg" alt="Adams Oyama" width="400" height="600" class="lazyload" loading="lazy">
+        <img src="../images/profile.jpg" alt="Adams Oyama" width="400" height="600" class="lazyload" loading="lazy">
+        <img src="../images/profile.jpg" alt="Adams Oyama" width="400" height="600" class="lazyload" loading="lazy">
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &bull; Adams Oyama &bull; Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
