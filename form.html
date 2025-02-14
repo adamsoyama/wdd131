@@ -10,7 +10,9 @@
     <!-- Google Fonts preconnect and stylesheet links -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- CSS file -->
     <link rel="stylesheet" href="styles/form.css">
     <!-- JS file -->
@@ -22,47 +24,74 @@
         <h1>Product Review</h1>
     </header>
     <main>
-        <form id="reviewForm" method="get" action="review.html">
-            <div>
-                <label for="productName">Product Name:</label>
-                <select id="productName" name="productName" required>
-                    <option value="" disabled selected>Select a Product ...</option>
-                    <!-- Options will be dynamically populated by JavaScript -->
-                </select>
-            </div>
+        <form id="review-form" method="get" action="review.html">
+            <label for="product-name">Product Name:</label>
+            <select id="product-name" name="productName" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
 
-            <div>
-                <label>Overall Rating:</label>
+            <fieldset>
+                <legend>Overall Rating:</legend>
                 <div id="ratingGroup">
-                    <!-- Rating radio buttons will be dynamically added here -->
+                    <div>
+                        <input type="radio" id="star1" name="rating" value="1" required>
+                        <label for="star1">☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2">☆☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3">☆☆☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4">☆☆☆☆</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5">☆☆☆☆☆</label>
+                    </div>
                 </div>
-            </div>
+            </fieldset>
 
-            <div>
-                <label for="installationDate">Date of Installation:</label>
-                <input type="date" id="installationDate" name="installationDate" required>
-            </div>
+            <label for="installation-date">Date of Installation:</label>
+            <input type="date" id="installation-date" name="installationDate" required>
 
-            <div>
-                <label>Useful Features (Check all that apply):</label>
+            <fieldset>
+                <legend>
+                    Which features did you find useful in the product?<span>
+                        <p>(Click all that applies)</p>
+                    </span>
+                </legend>
                 <div id="featuresGroup">
-                    <!-- Checkboxes will be dynamically populated by JavaScript -->
+                    <div>
+                        <input type="checkbox" id="feature1" name="usefulFeatures" value="Feature1">
+                        <label for="feature1">Durability</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature2" name="usefulFeatures" value="Feature2">
+                        <label for="feature2">Ease of Use</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature3" name="usefulFeatures" value="Feature3">
+                        <label for="feature3">Performance</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature4" name="usefulFeatures" value="Feature4">
+                        <label for="feature4">Design</label>
+                    </div>
                 </div>
-            </div>
+            </fieldset>
 
-            <div>
-                <label for="writtenReview">Written Review:</label>
-                <textarea id="writtenReview" name="writtenReview"></textarea>
-            </div>
+            <label for="written-review">Written Review:<span> (Optional)</span></label>
+            <textarea id="written-review" name="writtenReview"></textarea>
 
-            <div>
-                <label for="userName">Your Name:</label>
-                <input type="text" id="userName" name="userName">
-            </div>
+            <label for="user-name">User Name:</label>
+            <input type="text" id="user-name" name="userName">
 
-            <div>
-                <input type="submit" value="Submit Review">
-            </div>
+            <input type="submit" value="Post Review">
         </form>
     </main>
     <footer>
