@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="WDD 131 - Product Review Form - Adams Oyama">
+    <meta name="author" content="Adams Oyama">
+    <!-- Google Fonts preconnect and stylesheet links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="styles/form.css">
+    <!-- JS file -->
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form id="reviewForm" method="get" action="review.html">
+            <div>
+                <label for="productName">Product Name:</label>
+                <select id="productName" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <!-- Options will be dynamically populated by JavaScript -->
+                </select>
+            </div>
+
+            <div>
+                <label>Overall Rating:</label>
+                <div id="ratingGroup">
+                    <!-- Rating radio buttons will be dynamically added here -->
+                </div>
+            </div>
+
+            <div>
+                <label for="installationDate">Date of Installation:</label>
+                <input type="date" id="installationDate" name="installationDate" required>
+            </div>
+
+            <div>
+                <label>Useful Features (Check all that apply):</label>
+                <div id="featuresGroup">
+                    <!-- Checkboxes will be dynamically populated by JavaScript -->
+                </div>
+            </div>
+
+            <div>
+                <label for="writtenReview">Written Review:</label>
+                <textarea id="writtenReview" name="writtenReview"></textarea>
+            </div>
+
+            <div>
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName">
+            </div>
+
+            <div>
+                <input type="submit" value="Submit Review">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> &bull; Adams Oyama &bull; Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
