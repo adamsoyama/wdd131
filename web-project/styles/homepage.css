@@ -1,0 +1,276 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003377;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #003377;
+    border-radius: 5px;
+}
+
+main {
+    background: "images";
+}
+
+#hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.text {
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.button {
+    background-color: #003377;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #6895d9;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    font-family: 'Playfair Display', serif;
+    background-color: #003366;
+    /* Dark Blue */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p#lastModified {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+footer p#currentyear {
+    font-size: 1.1rem;
+}
+
+/* Media Queries */
+@media (min-width: 320px) and (max-width: 516px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    header img {
+        width: 30px;
+    }
+
+    header h1 {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #hero {
+        padding: 1rem;
+        margin: 1rem;
+        max-width: 90%;
+    }
+
+
+    .button {
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (min-width: 517px) and (max-width: 768px) {
+    header {
+        padding: 0.75rem 1.5rem;
+    }
+
+    header img {
+        width: 40px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #hero {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+        max-width: 80%;
+    }
+
+    .button {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    header img {
+        width: 50px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    #hero {
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 70%;
+    }
+
+    .button {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    header {
+        padding: 1.5rem 3rem;
+    }
+
+    header img {
+        width: 60px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    #hero {
+        padding: 2.5rem;
+        margin: 2.5rem auto;
+        max-width: 60%;
+    }
+
+    .button {
+        padding: 1.25rem 2.5rem;
+    }
+}

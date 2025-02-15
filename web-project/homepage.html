@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Homepage</title>
+    <meta name="description" content="WDD 131 - Task Manager Website Project - Adams Oyama">
+    <meta name="author" content="Adams Oyama">
+    <!-- Google Fonts preconnect and stylesheet links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="styles/homepage.css">
+    <!-- JS file -->
+    <script src="scripts/homepage.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/taskmanager.png" alt="A logo of WaveRush Adventure" width="80">
+        <h1>Task Manager</h1>
+        <nav>
+            <ul>
+                <li><a href="signin.html">Sign In</a></li>
+                <li><a href="signup.html">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h2>Stay Organized, Stay Creative</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="images/reminder.png" alt="Create reminders and repetition for tasks" loading="lazy" style="width:auto; height:300px;">
+                    <div class="text">Create reminders and repetition for tasks</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/calendar.png" alt="Organize schedule with Calendar view" loading="lazy" style="width:auto; height: 300px;">
+                    <div class="text">Organize schedule with Calendar view</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/eisenhower-matrix.png" alt="Use Eisenhower Matrix to prioritize tasks" loading="lazy" style="width:auto; height: 300px;">
+                    <div class="text">Use Eisenhower Matrix to prioritize tasks</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/pomo.png" alt="Improve focus with Pomo" loading="lazy" style="width:auto; height: 300px;">
+                    <div class="text">Improve focus with Pomo</div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/good-habits.png" alt="Check-in to cultivate good habits" loading="lazy" style="width:auto; height: 300px;">
+                    <div class="text">Check-in to cultivate good habits</div>
+                </div>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <a href="signup.html" class="button">Get Started</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; &bull; <span id="currentyear"></span> &bull; TaskMaster </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
