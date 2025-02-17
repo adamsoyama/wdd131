@@ -416,6 +416,31 @@ footer p#currentyear {
     font-size: 1.1rem;
 }
 
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme .container {
+    border-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .form-group input {
+    background-color: #555;
+    border-color: #666;
+    color: #fff;
+}
+
+body.dark-theme .form-group button {
+    background-color: #0062cc;
+}
+
+body.dark-theme .form-group button:hover {
+    background-color: #003d99;
+}
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     header {
