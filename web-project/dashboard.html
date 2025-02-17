@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Dashboard</title>
+    <meta name="description" content="Welcome to your Task Manager dashboard">
+    <meta name="author" content="Adams Oyama">
+    <!-- Google Fonts preconnect and stylesheet links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- JS file -->
+    <script src="scripts/dashboard.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/taskmanager.png" alt="Task Manager Logo" width="80">
+        <h1>Task Manager</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome-section">
+            <h2>Welcome, <span id="username"></span>!</h2>
+            <div id="profile-info">
+                <img src="images/default-profile.png" alt="Profile Picture" id="profile-picture" />
+                <div id="profile-details">
+                    <p><strong>First Name:</strong> <span id="profile-fname"></span></p>
+                    <p><strong>Last Name:</strong> <span id="profile-lname"></span></p>
+                    <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                </div>
+            </div>
+            <p id="profile-message">Welcome to your dashboard! Manage your tasks and profile here.</p>
+            <!-- Profile picture upload form -->
+            <form id="profile-picture-form">
+                <input type="file" id="profile-picture-input" accept="image/*" required />
+                <button type="submit">Upload Profile Picture</button>
+            </form>
+        </section>
+        <div id="content-grid">
+            <section id="task-display-section">
+                <h3>Task Manager</h3>
+                <!-- Tasks with checkboxes for marking completion -->
+                <ul id="task-display-list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+            </section>
+            <section id="habits-performance-section">
+                <h3>Habits Performance</h3>
+                <canvas id="taskPieChart"></canvas>
+            </section>
+            <section id="tasks-section">
+                <h3>Add Task</h3>
+                <!-- Task form for manually adding tasks -->
+                <form id="task-form">
+                    <input type="text" id="task-title" placeholder="Task Title" required />
+                    <input type="date" id="task-start-date" required />
+                    <input type="time" id="task-start-time" required />
+                    <input type="date" id="task-end-date" required />
+                    <input type="time" id="task-end-time" required />
+                    <button type="submit">Add Task</button>
+                </form>
+            </section>
+            <section id="calendar-section">
+                <h3>Calendar</h3>
+                <div id="calendar">
+                    <!-- Calendar will be dynamically added here -->
+                </div>
+            </section>
+            <section id="eisenhower-section">
+                <h3>Eisenhower Matrix</h3>
+                <div id="eisenhower-matrix">
+                    <div class="matrix-grid" id="completed-tasks">
+                        <h4>Completed Tasks</h4>
+                        <ul></ul>
+                    </div>
+                    <div class="matrix-grid" id="normal-tasks">
+                        <h4>Normal Tasks</h4>
+                        <ul></ul>
+                    </div>
+                    <div class="matrix-grid" id="overdue-tasks">
+                        <h4>Overdue Tasks</h4>
+                        <ul></ul>
+                    </div>
+                    <div class="matrix-grid" id="urgent-tasks">
+                        <h4>Urgent Tasks</h4>
+                        <ul></ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pomo-section">
+                <h3>Pomo</h3>
+                <div id="pomo">
+                    <div id="normal-completed-tasks">
+                        <h4>Normal & Completed Tasks</h4>
+                        <ul></ul>
+                    </div>
+                    <div id="urgent-overdue-tasks">
+                        <h4>Urgent & Overdue Tasks</h4>
+                        <ul></ul>
+                    </div>
+                </div>
+                <div id="pomo-progress-message"></div>
+            </section>
+
+        </div>
+        <section id="goodbye-section">
+            <h2 id="greeting-message"></h2>
+            <p id="appreciation-message"></p>
+            <p id="task-management-tip"></p>
+        </section>        
+    </main>
+    <footer>
+        <p>&copy; &bull; <span id="currentyear"></span> &bull; TaskMaster</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

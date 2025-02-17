@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     signupForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        const fname = document.getElementById('fname').value;
-        const lname = document.getElementById('lname').value;
+        const firstName = document.getElementById('fname').value;
+        const lastName = document.getElementById('lname').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
@@ -23,10 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Store user data in localStorage
-        localStorage.setItem('fname', fname);
-        localStorage.setItem('lname', lname);
-        localStorage.setItem('email', email);
-        localStorage.setItem('password', password);
+        const userData = {
+            firstName,
+            lastName,
+            email,
+            password
+        };
+        localStorage.setItem('userData', JSON.stringify(userData));
 
         // Redirect to dashboard.html
         window.location.href = 'dashboard.html';
