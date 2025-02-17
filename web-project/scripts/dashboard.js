@@ -258,9 +258,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Function to edit task (redirect to task details page)
+    // Function to edit task (redirect to tasks.html page)
     window.editTask = function (taskId) {
-        window.location.href = `taskDetails.html?taskId=${taskId}`;
+        window.location.href = `tasks.html?taskId=${taskId}`;
     }
 
     // Function to delete task

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Page</title>
+    <meta name="description" content="Welcome to your Task Manager dashboard">
+    <meta name="author" content="Adams Oyama">
+     <!-- Google Fonts preconnect and stylesheet links -->
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+         rel="stylesheet">
+     <!-- CSS file -->
+    <link rel="stylesheet" href="styles/tasks.css">
+    <script src="scripts/tasks.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/taskmanager.png" alt="Task Manager Logo" width="80">
+        <h1>Task Manager</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="content-grid">
+            <section id="tasks-section">
+                <h2>Current Tasks</h2>
+                <ul id="task-list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+            </section>
+            <section id="task-details-section" class="hidden">
+                <h2>Edit Task</h2>
+                <form id="edit-task-form">
+                    <input type="text" id="edit-task-title" placeholder="Task Title" required>
+                    <input type="date" id="edit-task-start-date" required>
+                    <input type="time" id="edit-task-start-time" required>
+                    <input type="date" id="edit-task-end-date" required>
+                    <input type="time" id="edit-task-end-time" required>
+                    <button type="submit">Save Changes</button>
+                    <button type="button" id="cancel-changes-button">Cancel Changes</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; &bull; <span id="currentyear"></span> &bull; TaskMaster</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
