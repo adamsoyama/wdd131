@@ -3,7 +3,7 @@ function saveProfile() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const profilePicture = document.getElementById('profile-picture').files[0];
-    
+
     if (profilePicture) {
         const reader = new FileReader();
         reader.onload = function (e) {
